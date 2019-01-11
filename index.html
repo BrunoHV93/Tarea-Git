@@ -1,0 +1,65 @@
+<!--Comentarios-->
+<!DOCTYPE html><!--Define html 5-->
+<html lang="es">
+<head><!--Colección metadatos-->
+	<meta charset="UTF-8"><!--Código ascii extendido-->
+	<title>Selectores avanzados</title>
+	<link rel="stylesheet" href="css/style.css"><!--link a css-->
+</head>
+<body>
+
+	<header>
+		<h1>BIENVENIDOS</h1>
+		<h1>Gracias por visitar nuestro catálogo</h1>
+	</header>
+
+	<div class="contenedor">
+		
+		<h2>Listado de tenis</h2>
+		<!-- <h2>Texto de prueba</h2> -->
+		
+		<p>A la fecha 09 de enero de 2019</p>
+		<p>Sujeto a disponibilidad</p>
+
+		<ul id="lista_principal">
+
+			<!--Listas anidadas-->
+			<p>Nuestras categorías</p>
+			<li>
+				<h4>MUJERES</h4>
+				<!--Class afecta todo y id sólo a uno-->
+				<ul class="lista_interna">
+					<li>Lifestyle</li>
+					<li>Running</li>
+					<li>Gimnasio</li>
+					<li>Golf</li>
+					<li>Fútbol</li>
+				</ul>
+			</li>
+
+			<br>
+
+			<li>
+				<h4>HOMBRES</h4>
+				<ul class="lista_interna">
+					<li>Lifestyle</li>
+					<li>Running</li>
+					<li>Entrenamiento</li>
+					<li>Tenis</li>
+				</ul>
+			</li>
+			
+		</ul>
+
+	<!--Para links oreferencias-->
+	<!--# sirve para menús, pues no nos manda a ningún otro sitio-->
+	<!--Los tittle permiten asignarle u texto al link-->
+	<a href="#" title="modelo"><p>PEDIR MODELOS</p></a>
+	<a href="#"	title="ver-mas"><p>VER MÁS PRODUCTOS</p></a>
+	<a href="http://google.com.mx" title="buscar en google"><p>BUSCAR EN GOOGLE</p></a>
+
+	</div>
+
+</body>
+
+</html>

@@ -1,0 +1,149 @@
+/*Fondos*/
+
+body{
+	/*Color al fondo en rgb(), rgba(), HEX, prefedinido*/
+	background-color: black;
+	/*Agregar una imagen de fondo*/
+	/*Las rutas relativas comienzan desde donde estamos trabajando, los dos puntos sacan a la carpeta anterior*/
+	background-image: url(../img/flecha.gif);
+	/*Desde dónde va a empezar a cubrir nuestra.*/
+	background-origin: border-box;
+	/*Posición del fondo en porcentaje partiendo del margen superior izquierdo (0 0), 
+	primer valor es eje horizontal y segundo valor es vertical*/
+	background-position: 0% 0%;
+	/*Para controlar la repetición  en el fondo, se puede repetir en x, y, todo el fondo o no repetir */
+	background-repeat: no-repeat;
+	/*Tamaño de la imagen. Primer elemento es el ancho y el segindo es alto, podemos poner auto auto
+	cover, o poner dimensiones.En este caso se deja de tamaño default*/
+	background-size: auto auto;  
+}
+
+/*Modificación clase*/
+.contenedor{
+	/*Para tamaño de contenedor.Podemos poner #px, #cm, etc.*/
+	width: 150px;
+	height: 950px;
+	margin: 10% auto;
+	/*Degradados lineales*/
+	background: linear-gradient(orange, blue);
+	background: linear-gradient(orange 50%, blue 50%);
+	background: linear-gradient(to left, orange, blue);
+	background: linear-gradient(to right, orange, blue);
+	background: linear-gradient(to bottom, orange, blue);
+	background: linear-gradient(to top, orange, blue);
+	background: linear-gradient(45deg, orange, blue);
+	background: linear-gradient(to left top, orange, blue);
+	background: linear-gradient(to bottom right, orange, blue);
+
+	/*Gradientes radiales*/
+	background: radial-gradient(red, green);
+	background: radial-gradient(red 50%, green 50%);
+	background: radial-gradient(circle, red 50%, green 50%);
+
+	/*Gradientes de UI*/
+    background: linear-gradient(to top right, #FD746C, #2C3E50); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	/*Para redondear esquinas*/
+	border-radius: 20px;
+	/*Eje x, eje y, difuminado, radio, color*/
+	/*RGBA red, green, blue y alpha, donde alpha es la opacidad que va de 0 a 1*/
+	box-shadow:  -10px -10px 10px 3px rgba(160, 160, 160, 0.5);
+}
+
+h1{
+
+	color: white;
+	text-align: center;
+	font-family: sans-serif;
+	/*Sombra en texto*/
+	text-shadow: 4px 4px 10px red;
+}
+
+h2{
+
+	color: white;
+	text-align: center;
+	font-family: sans-serif;
+}
+
+/*Selectores avanzados de CSS*/
+
+	/*Descendiente directo(>)*/
+	/*Todas las etiquetas il que contangan el id */
+	ul#lista_principal > li{
+		font-family: monospace;
+		color: yellow;
+		font-size: 18px;
+	}
+
+	ul > p{
+		font-size: 25px;
+		text-decoration: overline underline;
+	}
+
+	/*Elementos adyacentes (+)...
+	Depende de si tiene un elemento <X> junto a ellos (a la misma altura y sólo el siguiente imendiato)*/
+	h2+p{
+		font-weight: bold;
+		text-align: center;
+		color: lightgray;
+		text-shadow: 2px 2px 2px black;
+	}
+
+	p+p{
+		text-align: center;
+		font-size: 15px;
+		text-shadow: 0.5px -0.5px 1px white;
+	}
+
+	/*El primer HIJO de otro elemento*/
+ 	
+ 	h2:first-child:hover{
+	padding-top: 25px;
+	color: aqua;
+	font-size: 40px; 
+	} 
+
+
+	h1:first-child {
+		padding-top: 25px;
+		color: black;
+		font-size: 40px; 
+	}
+
+	/*El último elemento HIJO de otro elemento*/
+	/*Se deja un espacio para indicar que únicamente ese elemento será modificado*/
+	ul.lista_interna li:last-child{
+		color: black;
+		font-weight: bold;
+	}
+
+	/*La primer LETRA de un elemento*/
+	ul.lista_interna li:first-letter{
+		color: olivedrab;
+		font-size: 30px;
+	}
+
+/*Busqueda por atributos*/
+	
+	/*Todas las etiquetas que tengan ese atributo sin importar el valor*/
+	a[title]{
+		text-align: center;
+	}
+
+	/*Etiquetas que tengan cierto valor IGUAL en el atributo. Sensitivo a minúsculas y mayúsculas*/
+	a[title="modelo"]{
+		color: yellow;
+	}
+
+	/*Etiquetas donde el valor del atributo empiece por una palabra*/
+	a[title|="ver"]{
+		color: white;
+	}
+
+	/*Etiquetas donde el valor del atributo contenga x palabra*/
+	a[title~=google]{
+		color: black;
+		font-weight: bold;
+		font-family: monospace;
+		font-size: 15px;
+	}
